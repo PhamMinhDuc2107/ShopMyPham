@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Trang sản phẩm</title>
+      <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+         rel="stylesheet"
+      />
+      <!-- font-awesome -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      />
+      <!-- toastr -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- css -->
+      <link rel="stylesheet" href="./assets/css/reset.css" />
+      <link rel="stylesheet" href="./assets/css/style.css" />
+      <link rel="stylesheet" href="./assets/css/home.css" />
+      <link rel="stylesheet" href="./assets/css/product.css" />
+   </head>
+   <body>
+      <div class="wrapper">
+         <!-- header -->
+         <header class="header">
+            <!-- header-top -->
+            <div class="header__top">
+               <div class="container__hd">
+                  <div class="header__top--container">
+                     <!-- header__xl -->
+                     <div class="header__xl">
+                        <div class="header__xl--bar">
+                           <i class="fa fa-bars"></i>
+                        </div>
+                     </div>
+                     <!-- header__left -->
+                     <div class="header__left">
+                        <div class="header__logo">HADI<span>BEAUTY</span></div>
+                     </div>
+                     <!-- header__center -->
+                     <div class="header__center">
+                        <div class="header__search">
+                           <input
+                              type="text"
+                              class="header__search--input"
+                              placeholder="Nhập từ khoá tìm kiếm sản phẩm, danh mục"
+                           />
+                           <i class="fa fa-search header__search--icon"></i>
+                        </div>
+                     </div>
+                     <!-- header__right -->
+                     <div class="header__right">
+                        <div class="header__xl--search">
+                           <i class="fa fa-search"></i>
+                        </div>
+                        <div href="#" class="header__cart">
+                           <a href="./cart.html" class="header__cart--link">
+                              <i
+                                 class="fa-solid fa-bag-shopping header__cart--icon"
+                              ></i>
+                              <span class="header__cart--number">0</span>
+                           </a>
+                           <!-- cart--mini -->
+                           <div class="cart__mini">
+                              <ul class="cart__mini--sidebar">
+                                 <ul class="mini__product--list"></ul>
+                                 <!-- total -->
+                                 <div class="mini__total">
+                                    Tổng cộng:
+                                    <span class="mini__total--price">0đ</span>
+                                 </div>
+                                 <div class="mini__button">
+                                    <a href="" class="mini__button--actions btn"
+                                       >Tiến hành thanh toán</a
+                                    >
+                                 </div>
+                              </ul>
+                           </div>
+                           <!-- /cart--mini -->
+                        </div>
+                        <a href="#" class="header__auth">
+                           <i class="fa-solid fa-user header__auth--icon"></i>
+                           <span class="header__auth--text">Tài Khoản</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- search-box -->
+               <div class="search__wrap">
+                  <div class="search__box">
+                     <input
+                        type="text"
+                        class="search__input"
+                        placeholder="Search Top..."
+                     />
+                     <a href="" class="search__btn">Search</a>
+                  </div>
+               </div>
+               <!-- /search-box -->
+            </div>
+            <!-- /header-top -->
+            <!-- header-nav -->
+            <div class="header__nav">
+               <div class="container__hd">
+                  <div class="header__nav--container">
+                     <ul class="header__nav--list">
+                        <li class="header__nav--item">
+                           <a href="./home.html" class="header__nav--link"
+                              >Trang chủ</a
+                           >
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="./product.html" class="header__nav--link"
+                              >Chăm sóc cơ thể</a
+                           >
+                           <i class="fa fa-angle-down header__nav--icon"></i>
+                           <ul class="header__dropdown--menu">
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu1</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu2</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu3</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="" class="header__nav--link">Chăm sóc da</a>
+                           <i class="fa fa-angle-down header__nav--icon"></i>
+                           <ul class="header__dropdown--menu">
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu1</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu2</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu3</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="" class="header__nav--link"
+                              >Chăm sóc nhà cửa</a
+                           >
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="" class="header__nav--link">Chăm sóc tóc</a>
+                           <i class="fa fa-angle-down header__nav--icon"></i>
+                           <ul class="header__dropdown--menu">
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu1</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu2</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                              <li class="header__dropdown--submenu">
+                                 <a href="" class="header__dropdown--link"
+                                    >Demo Menu3</a
+                                 >
+                                 <i
+                                    class="fa fa-angle-right header__dropdown--icon"
+                                 ></i>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="" class="header__nav--link">Hương thơm</a>
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="" class="header__nav--link">Khuyến mãi</a>
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="" class="header__nav--link">Giới thiệu</a>
+                        </li>
+                        <li class="header__nav--item">
+                           <a href="./blog.html" class="header__nav--link"
+                              >Blog làm đẹp</a
+                           >
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- /header-nav -->
+         </header>
+         <!-- /header -->
+         <!-- navBar -->
+         <section class="navBar">
+            <div class="container">
+               <div class="navBar__container">
+                  <a href="./home.html" class="navBar__link">
+                     <i class="fa fa-home"></i>
+                     Trang chủ
+                  </a>
+                  <i class="fa fa-angle-right navBar__icon"></i>
+                  <a href="" class="navBar__link">Giỏ hàng</a>
+               </div>
+            </div>
+         </section>
+         <!-- navBar -->
+         <!-- main -->
+         <section class="main">
+            <div class="container">
+               <div class="main__container">
+                  <div class="main__left">
+                     <div class="sidebar">
+                        <h3 class="sidebar__title">Danh mục sản phẩm</h3>
+                        <ul class="sidebar__list">
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Chăm sóc cơ thể</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(2)</span>
+                              </div>
+                              <div class="sidebar__item--icon">
+                                 <i class="fa fa-angle-down"></i>
+                              </div>
+                              <ul class="sidebar__dropdown">
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 1</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 2</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 3</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 4</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Chăm sóc da</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(5)</span>
+                              </div>
+                              <div class="sidebar__item--icon">
+                                 <i class="fa fa-angle-down"></i>
+                              </div>
+                              <ul class="sidebar__dropdown">
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 1</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 2</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 3</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 4</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Chăm sóc nhà cửa</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(10)</span>
+                              </div>
+                           </li>
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Chăm sóc tóc</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(5)</span>
+                              </div>
+                              <div class="sidebar__item--icon">
+                                 <i class="fa fa-angle-down"></i>
+                              </div>
+                              <ul class="sidebar__dropdown">
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 1</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 2</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 3</a
+                                    >
+                                 </li>
+                                 <li class="sidebar__dropdown--item">
+                                    <a href="" class="sidebar__dropdown--link"
+                                       >Demo Menu 4</a
+                                    >
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Hương thơm</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(5)</span>
+                              </div>
+                           </li>
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Khuyến mãi</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(5)</span>
+                              </div>
+                           </li>
+                           <li class="sidebar__item">
+                              <a href="" class="sidebar__item--link">
+                                 <i
+                                    class="fa fa-caret-right sidebar__link--icon"
+                                 ></i>
+                                 <span class="sidebar__link--text"
+                                    >Trang điểm</span
+                                 >
+                              </a>
+                              <div class="sidebar__item--quantity">
+                                 <span>(5)</span>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="main__right">
+                     <!-- main__top -->
+                     <div class="main__top">
+                        <h3 class="main__top--title">
+                           Chăm sóc cơ thể
+                           <span>(3 sản phẩm)</span>
+                        </h3>
+                        <div class="filter">
+                           <div class="filter__btn">
+                              <i class="fa-solid fa-filter"></i>
+                              Bộ lọc
+                           </div>
+                           <div class="filter__select">
+                              <select name="" id="">
+                                 <option value="">Thứ tự mặc định</option>
+                                 <option value="">Giá từ thấp đến cao</option>
+                                 <option value="">Giá từ cao đến thấp</option>
+                              </select>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- main__banner -->
+                     <div class="main__banner">
+                        <img
+                           src="./assets/images/banner__main.png"
+                           alt=""
+                           class="main__banner--img"
+                        />
+                     </div>
+                     <!-- /main__banner -->
+                     <!-- main__product -->
+                     <div class="page__product">
+                        <div class="product__list"></div>
+                        <ul class="pagi">
+                           <li class="pagi__item">
+                              <a href="" class="pagi__item--link">1</a>
+                           </li>
+                           <li class="pagi__item">
+                              <a href="" class="pagi__item--link">2</a>
+                           </li>
+                           <li class="pagi__item">
+                              <a href="" class="pagi__item--link">3</a>
+                           </li>
+                           <li class="pagi__item">
+                              <a href="" class="pagi__item--link">4</a>
+                           </li>
+                           <li class="pagi__item">
+                              <a href="" class="pagi__item--link"
+                                 ><i class="fa-solid fa-angles-right"></i></i
+                              ></a>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- /main__product -->
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- /main -->
+         <!-- footer -->
+         <footer class="footer">
+            <div class="container">
+               <div class="footer__container">
+                  <div class="footer__list">
+                     <div class="footer__item">
+                        <h4 class="footer__item--title">Về chúng tôi</h4>
+                        <ul class="footer__box">
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Về chuyện của chúng tôi</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Về nhà máy</a
+                              >
+                           </li>
+                           <li class="footer__box--logo">
+                              <a href="" class="footer__box--link">
+                                 <div class="header__logo">
+                                    HADI<span>BEAUTY</span>
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="footer__item">
+                        <h4 class="footer__item--title">Hoạt động cộng đồng</h4>
+                        <ul class="footer__box">
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Xây dựng trường cho trẻ em</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Đôi bàn tay thơm</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Chung tay chống COVID</a
+                              >
+                           </li>
+                           <ul class="footer__social--list">
+                              <li class="footer__social--item">
+                                 <a
+                                    href="
+                    "
+                                    class="footer__social--link"
+                                 >
+                                    <i class="fa-brands fa-facebook"></i
+                                 ></a>
+                              </li>
+                              <li class="footer__social--item">
+                                 <a
+                                    href="
+                    "
+                                    class="footer__social--link"
+                                 >
+                                    <i class="fa-solid fa-envelope"></i>
+                                 </a>
+                              </li>
+                              <li class="footer__social--item">
+                                 <a
+                                    href="
+                  "
+                                    class="footer__social--link"
+                                 >
+                                    <i class="fa-solid fa-phone"></i>
+                                 </a>
+                              </li>
+                              <li class="footer__social--item">
+                                 <a
+                                    href="
+                "
+                                    class="footer__social--link"
+                                 >
+                                    <i class="fa-brands fa-youtube"></i>
+                                 </a>
+                              </li>
+                           </ul>
+                        </ul>
+                     </div>
+                     <div class="footer__item">
+                        <h4 class="footer__item--title">Hướng dẫn mua hàng</h4>
+                        <ul class="footer__box">
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Chính sách mua hàng và thanh toán</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Chính sách bảo hành</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Chính sách đổi trả và hoàn tiền</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Chính sách bảo mật thông tin</a
+                              >
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="footer__item">
+                        <h4 class="footer__item--title">Thông tin liên hệ</h4>
+                        <ul class="footer__box">
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Địa chỉ: Trần Khát Chân, Hai Bà Trưng, Hải
+                                 Phòng</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >SĐT: 0982232xxxx</a
+                              >
+                           </li>
+                           <li class="footer__box--item">
+                              <a href="" class="footer__box--link"
+                                 >Email: info@gmail.com</a
+                              >
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- footer -->
+         <!-- copyright -->
+         <section class="copyright">
+            <div class="container">
+               <div class="copyright__container">
+                  <p class="copyright__text">
+                     Copyright 2023 © Mẫu giao diện website mỹ phẩm
+                  </p>
+               </div>
+            </div>
+         </section>
+         <!-- copyright -->
+      </div>
+      <!-- menu -->
+      <div class="menu__wrap">
+         <ul class="menu__list">
+            <li class="menu__item">
+               <a href="./home.html" class="menu__item--link">Trang chủ</a>
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link"
+                  >Chăm sóc cơ thể</a
+               >
+               <i class="fa fa-angle-down menu__item--icon"></i>
+               <ul class="menu__dropdown">
+                  <li class="menu__dropdown--submenu">
+                     <a href="./product.html" class="menu__dropdown--link"
+                        >Demo Menu1</a
+                     >
+                  </li>
+                  <li class="menu__dropdown--submenu">
+                     <a href="./product.html" class="menu__dropdown--link"
+                        >Demo Menu2</a
+                     >
+                  </li>
+                  <li class="menu__dropdown--submenu">
+                     <a href="./product.html" class="menu__dropdown--link"
+                        >Demo Menu3</a
+                     >
+                  </li>
+               </ul>
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link">Chăm sóc da</a>
+               <i class="fa fa-angle-down menu__item--icon"></i>
+               <ul class="menu__dropdown">
+                  <li class="menu__dropdown--submenu">
+                     <a href="" class="menu__dropdown--link">Demo Menu1</a>
+                  </li>
+                  <li class="menu__dropdown--submenu">
+                     <a href="" class="menu__dropdown--link">Demo Menu2</a>
+                  </li>
+                  <li class="menu__dropdown--submenu">
+                     <a href="" class="menu__dropdown--link">Demo Menu3</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link"
+                  >Chăm sóc nhà cửa</a
+               >
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link">
+                  Chăm sóc tóc
+               </a>
+               <i class="fa fa-angle-down menu__item--icon"></i>
+               <ul class="menu__dropdown">
+                  <li class="menu__dropdown--submenu">
+                     <a href="" class="menu__dropdown--link">Demo Menu1</a>
+                  </li>
+                  <li class="menu__dropdown--submenu">
+                     <a href="" class="menu__dropdown--link">Demo Menu2</a>
+                  </li>
+                  <li class="menu__dropdown--submenu">
+                     <a href="" class="menu__dropdown--link">Demo Menu3</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link">Hương thơm</a>
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link">Khuyến mãi</a>
+            </li>
+            <li class="menu__item">
+               <a href="./product.html" class="menu__item--link">Giới thiệu</a>
+            </li>
+            <li class="menu__item">
+               <a href="./blog.html" class="menu__item--link">Blog làm đẹp</a>
+            </li>
+         </ul>
+      </div>
+      <!-- /menu -->
+      <!-- button -->
+      <div class="click--top">
+         <i class="fa-solid fa-angles-up"></i>
+      </div>
+      <!-- button -->
+      <!-- filter__wrap -->
+      <div class="sidebar__filter">
+         <div class="sidebar__filter--wrap">
+            <h2 class="sidebar__filter--title">Tìm theo</h2>
+            <aside class="filter__price">
+               <h3 class="aside__title">Khoảng giá</h3>
+               <div class="sidebar__filter--content">
+                  <ul class="sidebar__filter--list">
+                     <li class="sidebar__filter--item">
+                        <label for="price-100000" class="filter__input--group">
+                           <input type="checkbox" id="price-100000" />
+                           <span>Giá dưới 100.000đ</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="price-1000000" class="filter__input--group">
+                           <input type="checkbox" id="price-1000000" />
+                           <span>Giá dưới 1.000.000đ</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="price-2000000" class="filter__input--group">
+                           <input type="checkbox" id="price-2000000" />
+                           <span>Giá dưới 2.000.000đ</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="price-3000000" class="filter__input--group">
+                           <input type="checkbox" id="price-3000000" />
+                           <span>Giá dưới 3.000.000đ</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="price-5000000" class="filter__input--group">
+                           <input type="checkbox" id="price-5000000" />
+                           <span>Giá dưới 5.000.000đ</span>
+                        </label>
+                     </li>
+                  </ul>
+               </div>
+            </aside>
+            <aside class="filter__cate">
+               <h3 class="aside__title">Danh mục sản phẩm</h3>
+               <div class="sidebar__filter--content">
+                  <ul class="sidebar__filter--list">
+                     <li class="sidebar__filter--item">
+                        <label for="chamsocotthe" class="filter__input--group">
+                           <input type="checkbox" id="chamsocotthe" />
+                           <span>Chăm sóc cơ thể</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="chamsocda" class="filter__input--group">
+                           <input type="checkbox" id="chamsocda" />
+                           <span>Chăm sóc da</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="chamsocnhacua" class="filter__input--group">
+                           <input type="checkbox" id="chamsocnhacua" />
+                           <span>Chăm sóc nhà cửa</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="chamsoctoc" class="filter__input--group">
+                           <input type="checkbox" id="chamsoctoc" />
+                           <span>Chăm sóc tóc</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="huongthom" class="filter__input--group">
+                           <input type="checkbox" id="huongthom" />
+                           <span>Hương thơm</span>
+                        </label>
+                     </li>
+                     <li class="sidebar__filter--item">
+                        <label for="khuyenmai" class="filter__input--group">
+                           <input type="checkbox" id="khuyenmai" />
+                           <span>Khuyến mại</span>
+                        </label>
+                     </li>
+                  </ul>
+               </div>
+            </aside>
+         </div>
+      </div>
+      <!-- filter__wrap -->
+   </body>
+   <script src="./assets/utils/data.js"></script>
+   <script src="./assets/utils/template.js"></script>
+   <script src="./assets/utils/function.js"></script>
+   <script src="./assets/utils/render.js"></script>
+   <script src="./assets/js/app.js"></script>
+   <script src="./assets/js/product.js"></script>
+</html>

@@ -1,0 +1,38 @@
+{
+  "orders": [
+    {
+      "name": "a",
+      "email": "a@gmail.com",
+      "phone": "0389820701",
+      "provinces": "Tỉnh Hà Giang",
+      "districts": "Huyện Yên Minh",
+      "wards": "Xã Bạch Đích",
+      "address": "123",
+      "date": "9/27/2023, 12:23:40 PM",
+      "id": "JRMK6MCMBK",
+      "infoOrder": [
+        {
+          "id": "4",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "name": "a",
+      "email": "a@gmail.com",
+      "phone": "0389820701",
+      "provinces": "Tỉnh Hà Giang",
+      "districts": "Huyện Mèo Vạc",
+      "wards": "Xã Thượng Phùng",
+      "address": "231313",
+      "date": "9/27/2023, 12:25:13 PM",
+      "id": "A9C8KAMA42",
+      "infoOrder": [
+        {
+          "id": "5",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}
