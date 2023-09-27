@@ -74,6 +74,13 @@ if (cartList) {
       if (e.target.classList.contains("cart__item--input")) {
          let id = +e.target.dataset.id;
          let quantity = +e.target.value;
+         localStorageManagement.changeQuantityProduct(
+            id,
+            quantity,
+            dataCarts,
+            dataProducts,
+            cartList
+         );
          if (
             !localStorageManagement.checkQuantityProduct(
                dataCarts,

@@ -16,11 +16,6 @@
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       />
-      <!-- css-splice -->
-      <link
-         rel="stylesheet"
-         href="./assets/libs/splide-4.1.3/dist/css/splide.min.css"
-      />
       <!-- css -->
       <link rel="stylesheet" href="./assets/css/reset.css" />
       <link rel="stylesheet" href="./assets/css/style.css" />
@@ -265,17 +260,24 @@
          </header>
          <!-- /header -->
          <!-- slider -->
-         <section class="slider splide">
-            <div class="slider__container splide__track">
+         <section class="slider">
+            <div class="slider__wrap splide__wrap">
                <ul class="slider__list splide__list">
-                  <li class="slider__item splide__slide">
+                  <li class="slider__item splide__item">
                      <img
                         src="./assets/images/banner1.png"
                         alt=""
                         class="slider__img"
                      />
                   </li>
-                  <li class="slider__item splide__slide">
+                  <li class="slider__item splide__item">
+                     <img
+                        src="./assets/images/banner1.png"
+                        alt=""
+                        class="slider__img"
+                     />
+                  </li>
+                  <li class="slider__item splide__item">
                      <img
                         src="./assets/images/banner1.png"
                         alt=""
@@ -283,6 +285,13 @@
                      />
                   </li>
                </ul>
+               <ul class="splide__dots"></ul>
+               <div class="splide__icon splide__prev">
+                  <i class="fa fa-angle-left"></i>
+               </div>
+               <div class="splide__icon splide__next">
+                  <i class="fa fa-angle-right"></i>
+               </div>
             </div>
          </section>
          <!-- /slider -->
@@ -352,13 +361,14 @@
                <section class="product">
                   <h2 class="product__title">Sản phẩm mới ra</h2>
                   <div class="product__slider">
-                     <div class="product__list"></div>
-                     <button class="product__btn product__prev">
+                     <div class="product__list splide__list"></div>
+                     <ul class="splide__dots"></ul>
+                     <div class="splide__icon splide__prev">
                         <i class="fa fa-angle-left"></i>
-                     </button>
-                     <button class="product__btn product__next">
+                     </div>
+                     <div class="splide__icon splide__next">
                         <i class="fa fa-angle-right"></i>
-                     </button>
+                     </div>
                   </div>
                </section>
                <!-- product -->
@@ -451,87 +461,82 @@
                      </div>
                      <!-- blog__mini -->
                      <div class="blogMini splide">
-                        <div class="splide__slider">
-                           <div class="splide__track">
-                              <div class="blogMini__list splide__list">
-                                 <div class="blogMini__item splide__slide">
-                                    <div class="blogMini__item--img">
-                                       <img
-                                          src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
-                                          alt=""
-                                       />
-                                    </div>
-                                    <div class="blogMini__item--title">
-                                       <h2>
-                                          Lorem ipsum dolor sit amet consectetur
-                                          adipisicing elit. Molestias fuga
-                                          necessitatibus ab, ipsum adipisci
-                                          iusto consequatur libero harum
-                                          explicabo culpa, corrupti voluptate.
-                                          Facere esse obcaecati harum amet
-                                          perspiciatis cum dolores?
-                                       </h2>
-                                    </div>
+                        <div class="blogMini__wrap">
+                           <div class="blogMini__list splide__list">
+                              <div class="blogMini__item splide__item">
+                                 <div class="blogMini__item--img">
+                                    <img
+                                       src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
+                                       alt=""
+                                    />
                                  </div>
-                                 <div class="blogMini__item splide__slide">
-                                    <div class="blogMini__item--img">
-                                       <img
-                                          src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
-                                          alt=""
-                                       />
-                                    </div>
-                                    <div class="blogMini__item--title">
-                                       <h2>
-                                          Lorem ipsum dolor sit amet consectetur
-                                          adipisicing elit. Molestias fuga
-                                          necessitatibus ab, ipsum adipisci
-                                          iusto consequatur libero harum
-                                          explicabo culpa, corrupti voluptate.
-                                          Facere esse obcaecati harum amet
-                                          perspiciatis cum dolores?
-                                       </h2>
-                                    </div>
+                                 <div class="blogMini__item--title">
+                                    <h2>
+                                       Lorem ipsum dolor sit amet consectetur
+                                       adipisicing elit. Molestias fuga
+                                       necessitatibus ab, ipsum adipisci iusto
+                                       consequatur libero harum explicabo culpa,
+                                       corrupti voluptate. Facere esse obcaecati
+                                       harum amet perspiciatis cum dolores?
+                                    </h2>
                                  </div>
-                                 <div class="blogMini__item splide__slide">
-                                    <div class="blogMini__item--img">
-                                       <img
-                                          src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
-                                          alt=""
-                                       />
-                                    </div>
-                                    <div class="blogMini__item--title">
-                                       <h2>
-                                          Lorem ipsum dolor sit amet consectetur
-                                          adipisicing elit. Molestias fuga
-                                          necessitatibus ab, ipsum adipisci
-                                          iusto consequatur libero harum
-                                          explicabo culpa, corrupti voluptate.
-                                          Facere esse obcaecati harum amet
-                                          perspiciatis cum dolores?
-                                       </h2>
-                                    </div>
+                              </div>
+                              <div class="blogMini__item splide__item">
+                                 <div class="blogMini__item--img">
+                                    <img
+                                       src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
+                                       alt=""
+                                    />
                                  </div>
-                                 <div class="blogMini__item splide__slide">
-                                    <div class="blogMini__item--img">
-                                       <img
-                                          src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
-                                          alt=""
-                                       />
-                                    </div>
-                                    <div class="blogMini__item--title">
-                                       <h2>
-                                          Lorem ipsum dolor sit amet consectetur
-                                          adipisicing elit. Molestias fuga
-                                          necessitatibus ab, ipsum adipisci
-                                          iusto consequatur libero harum
-                                          explicabo culpa, corrupti voluptate.
-                                          Facere esse obcaecati harum amet
-                                          perspiciatis cum dolores?
-                                       </h2>
-                                    </div>
+                                 <div class="blogMini__item--title">
+                                    <h2>
+                                       Lorem ipsum dolor sit amet consectetur
+                                       adipisicing elit. Molestias fuga
+                                       necessitatibus ab, ipsum adipisci iusto
+                                       consequatur libero harum explicabo culpa,
+                                       corrupti voluptate. Facere esse obcaecati
+                                       harum amet perspiciatis cum dolores?
+                                    </h2>
+                                 </div>
+                              </div>
+                              <div class="blogMini__item splide__item">
+                                 <div class="blogMini__item--img">
+                                    <img
+                                       src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
+                                       alt=""
+                                    />
+                                 </div>
+                                 <div class="blogMini__item--title">
+                                    <h2>
+                                       Lorem ipsum dolor sit amet consectetur
+                                       adipisicing elit. Molestias fuga
+                                       necessitatibus ab, ipsum adipisci iusto
+                                       consequatur libero harum explicabo culpa,
+                                       corrupti voluptate. Facere esse obcaecati
+                                       harum amet perspiciatis cum dolores?
+                                    </h2>
+                                 </div>
+                              </div>
+                              <div class="blogMini__item splide__item">
+                                 <div class="blogMini__item--img">
+                                    <img
+                                       src="./assets/images/45e8f4939bc3bd36e4b87ab1e324d227_XL.jpeg"
+                                       alt=""
+                                    />
+                                 </div>
+                                 <div class="blogMini__item--title">
+                                    <h2>
+                                       Lorem ipsum dolor sit amet consectetur
+                                       adipisicing elit. Molestias fuga
+                                       necessitatibus ab, ipsum adipisci iusto
+                                       consequatur libero harum explicabo culpa,
+                                       corrupti voluptate. Facere esse obcaecati
+                                       harum amet perspiciatis cum dolores?
+                                    </h2>
                                  </div>
                               </div>
                            </div>
+                           <ul class="splide__dots"></ul>
                         </div>
                      </div>
                      <!-- /blog__mini -->
@@ -615,123 +620,123 @@
                   khám phá những bí quyết làm đẹp thú vị nhé!
                </p>
                <div class="splide blog__main">
-                  <div class="splide__slider">
-                     <div class="splide__track">
-                        <div class="blog__list splide__list">
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_1.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span class="hidden__text"
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay</span
-                                 >
-                              </div>
+                  <div class="blog__wrap splide__wrap">
+                     <ul class="splide__dots"></ul>
+                     <div class="blog__list splide__list">
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_1.jpg" alt="" />
                            </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_2.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay</span
-                                 >
-                              </div>
-                           </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_4.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay</span
-                                 >
-                              </div>
-                           </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_3.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Est cum,
-                                    fugiat rerum quaerat voluptates aliquam vero
-                                    autem aliquid ipsa saepe ex, illum possimus
-                                    nam quis maxime, repudiandae ad officiis
-                                    ipsam?</span
-                                 >
-                              </div>
-                           </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_1.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Est cum,
-                                    fugiat rerum quaerat voluptates aliquam vero
-                                    autem aliquid ipsa saepe ex, illum possimus
-                                    nam quis maxime, repudiandae ad officiis
-                                    ipsam?</span
-                                 >
-                              </div>
-                           </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_2.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Est cum,
-                                    fugiat rerum quaerat voluptates aliquam vero
-                                    autem aliquid ipsa saepe ex, illum possimus
-                                    nam quis maxime, repudiandae ad officiis
-                                    ipsam?</span
-                                 >
-                              </div>
-                           </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_4.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Est cum,
-                                    fugiat rerum quaerat voluptates aliquam vero
-                                    autem aliquid ipsa saepe ex, illum possimus
-                                    nam quis maxime, repudiandae ad officiis
-                                    ipsam?</span
-                                 >
-                              </div>
-                           </div>
-                           <div class="blog__item splide__slide">
-                              <div class="blog__item--img">
-                                 <img src="./assets/images/blog_4.jpg" alt="" />
-                              </div>
-                              <div class="blog__item--desc">
-                                 <span
-                                    >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
-                                    cần tránh ngay Lorem ipsum dolor sit amet
-                                    consectetur adipisicing elit. Est cum,
-                                    fugiat rerum quaerat voluptates aliquam vero
-                                    autem aliquid ipsa saepe ex, illum possimus
-                                    nam quis maxime, repudiandae ad officiis
-                                    ipsam?</span
-                                 >
-                              </div>
+                           <div class="blog__item--desc">
+                              <span class="hidden__text"
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay</span
+                              >
                            </div>
                         </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_2.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay</span
+                              >
+                           </div>
+                        </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_4.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay</span
+                              >
+                           </div>
+                        </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_3.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay Lorem ipsum dolor sit amet
+                                 consectetur adipisicing elit. Est cum, fugiat
+                                 rerum quaerat voluptates aliquam vero autem
+                                 aliquid ipsa saepe ex, illum possimus nam quis
+                                 maxime, repudiandae ad officiis ipsam?</span
+                              >
+                           </div>
+                        </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_1.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay Lorem ipsum dolor sit amet
+                                 consectetur adipisicing elit. Est cum, fugiat
+                                 rerum quaerat voluptates aliquam vero autem
+                                 aliquid ipsa saepe ex, illum possimus nam quis
+                                 maxime, repudiandae ad officiis ipsam?</span
+                              >
+                           </div>
+                        </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_2.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay Lorem ipsum dolor sit amet
+                                 consectetur adipisicing elit. Est cum, fugiat
+                                 rerum quaerat voluptates aliquam vero autem
+                                 aliquid ipsa saepe ex, illum possimus nam quis
+                                 maxime, repudiandae ad officiis ipsam?</span
+                              >
+                           </div>
+                        </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_4.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay Lorem ipsum dolor sit amet
+                                 consectetur adipisicing elit. Est cum, fugiat
+                                 rerum quaerat voluptates aliquam vero autem
+                                 aliquid ipsa saepe ex, illum possimus nam quis
+                                 maxime, repudiandae ad officiis ipsam?</span
+                              >
+                           </div>
+                        </div>
+                        <div class="blog__item splide__item">
+                           <div class="blog__item--img">
+                              <img src="./assets/images/blog_4.jpg" alt="" />
+                           </div>
+                           <div class="blog__item--desc">
+                              <span
+                                 >Bà bầu có nên dùng mỹ phẩm không? 9"Kẻ Thù"
+                                 cần tránh ngay Lorem ipsum dolor sit amet
+                                 consectetur adipisicing elit. Est cum, fugiat
+                                 rerum quaerat voluptates aliquam vero autem
+                                 aliquid ipsa saepe ex, illum possimus nam quis
+                                 maxime, repudiandae ad officiis ipsam?</span
+                              >
+                           </div>
+                        </div>
+                     </div>
+                     <div class="splide__icon splide__prev">
+                        <i class="fa fa-angle-left"></i>
+                     </div>
+                     <div class="splide__icon splide__next">
+                        <i class="fa fa-angle-right"></i>
                      </div>
                   </div>
                </div>
@@ -973,9 +978,6 @@
       </div>
       <!-- button -->
    </body>
-   <!-- splide -->
-   <script src="./assets/libs/splide-4.1.3/dist/js/splide.min.js"></script>
-   <script src="./assets/libs/splide-extension-auto-scroll-master/dist/js/splide-extension-auto-scroll.min.js"></script>
    <script src="./assets/js/splide.js"></script>
    <script src="./assets/utils/data.js"></script>
    <script src="./assets/utils/template.js"></script>

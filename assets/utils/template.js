@@ -1,7 +1,7 @@
 // templateProductItem
 function templateItemProduct({ id, hot, discount, img, price, name }, parent) {
    let template = `
-	<div class="product__item">
+	<div class="product__item splide__item">
 	<div class="product__item--new" style=${hot === 0 ? "display:none" : ""}>
 	<span>${hot === 1 ? "NEW" : ""}</span>
 	</div>
