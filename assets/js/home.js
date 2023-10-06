@@ -3,5 +3,5 @@ window.addEventListener("load", function (e) {
    splide("slider__wrap");
    splide("blog__wrap");
    splide("blogMini__wrap");
-   splide("product__slider");
+   splide("product__slider", 20, { 990: 15, 380: 10 });
 });

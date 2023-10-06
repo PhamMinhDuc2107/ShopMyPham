@@ -234,6 +234,10 @@
    .blog__bottom .blog__slider {
       overflow: scroll;
    }
+   .blog__wrap .blog__item {
+      width: 100%;
+      gap: 0;
+   }
    .blog__bottom .blog__item {
       width: 50%;
       flex-shrink: 0;

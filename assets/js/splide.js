@@ -1,5 +1,5 @@
 // splide
-function splide(classList) {
+function splide(classList, gap = 0, breakpoint = {}) {
    let splideList = document.querySelector(`.${classList} .splide__list`);
    let splideItem = document.querySelectorAll(`.${classList} .splide__item`);
    let splideDots = document.querySelector(`.${classList} .splide__dots`);
@@ -9,7 +9,25 @@ function splide(classList) {
    let scrollWidth = splideList.scrollWidth;
    let splideLength = scrollWidth / splideItemWidth;
    let positionItem = 0;
+   let spacing = gap;
    let index = 0;
+   // resize
+
+   window.onresize = (e) => {
+      let viewPortWidth = window.innerWidth;
+      splideItemWidth = splideList.offsetWidth;
+      splideLength = Math.floor(scrollWidth / splideItemWidth);
+      let keyBreakpoint = [];
+      let valueBreakpoint = [];
+      Object.keys(breakpoint).map((item) => keyBreakpoint.unshift(item));
+      Object.values(breakpoint).map((item) => valueBreakpoint.unshift(item));
+      for (let i = 0; i <= keyBreakpoint.length - 1; i++) {
+         if (+keyBreakpoint[i] < +viewPortWidth) {
+            spacing = valueBreakpoint[i];
+            break;
+         }
+      }
+   };
    // splideDots
    for (let a = 0; a < splideLength; a++) {
       let template = `<li data-index=${a}></li>`;
@@ -33,8 +51,9 @@ function splide(classList) {
       [...splideDotItem].forEach((item) =>
          item.addEventListener("click", function (e) {
             removeClassActiveDot();
-            let dataIndex = e.target.dataset.index;
-            positionItem = -1 * dataIndex * splideItemWidth;
+            let dataIndex = +e.target.dataset.index;
+            if (dataIndex === 0) spacing = 0;
+            positionItem = -1 * dataIndex * splideItemWidth - spacing;
             splideList.style.transform = `translateX(${positionItem}px)`;
             e.target.classList.add("active-dot");
             index = dataIndex;
@@ -58,7 +77,7 @@ function splide(classList) {
    function handleChangeSplide(direction) {
       if (direction === 1) {
          index++;
-         positionItem -= splideItemWidth;
+         positionItem = positionItem - splideItemWidth - spacing;
          if (index >= splideLength) {
             index = 0;
             positionItem = 0;
@@ -66,11 +85,11 @@ function splide(classList) {
          splideList.style.transform = `translateX(${positionItem}px)`;
       } else if (direction === -1) {
          index--;
-         positionItem += splideItemWidth;
+         positionItem = positionItem + splideItemWidth + spacing;
+         console.log(`handleChangeSplide ~ positionItem:`, positionItem);
          if (index < 0) {
             index = splideLength - 1;
-            positionItem = -index * splideItemWidth;
-            console.log(splideList.scrollWidth);
+            positionItem = -index * splideItemWidth - spacing;
          }
          splideList.style.transform = `translateX(${positionItem}px)`;
       }
